@@ -2,7 +2,7 @@
 
 ## Data exploration & analysis
 
-Data exploration is a critical skill that often goes under appreciated. It's often treated as more of an art than a science and that is because it requires a certain level of intution on how to take in raw data and turn out quantitative or qualitative results. In an attempt to hone my data exploration skills and teach myself how to create nice looking visualizations using Altair, I am using the most complete Pokemon dataset I could find from (Kaggle)[https://www.kaggle.com/mariotormo/complete-pokemon-dataset-updated-090420?select=pokedex_%28Update_04.21%29.csv]. 
+Data exploration is a critical skill that often goes under appreciated. It's often treated as more of an art than a science and that is because it requires a certain level of intution on how to take in raw data and turn out quantitative or qualitative results. In an attempt to hone my data exploration skills and teach myself how to create nice looking visualizations using Altair, I am using the most complete Pokemon dataset I could find from [Kaggle](https://www.kaggle.com/mariotormo/complete-pokemon-dataset-updated-090420?select=pokedex_%28Update_04.21%29.csv). 
 
 
 ## How to be the very best?
