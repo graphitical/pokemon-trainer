@@ -1,12 +1,13 @@
+// global variables
+var roster_list = []
+
 Papa.parse('data/pokedex.csv', {
     download: true,
     header: true,
     delimiter: ',',
     dynamicTyping: true,
     complete: function(results) {
-        var team = []
         var dash = init_viz(results)
-        // console.log(results.errors)
     }
 })
 
@@ -16,7 +17,6 @@ function init_viz(results) {
 
     var raw_data = results.data
     raw_data.pop() // there's a bad entry at the end
-    // console.log(raw_data)
     const pokedex = raw_data.map(item => (({pokedex_number, name, species, type_1, type_2, status}) => ({pokedex_number, name, species, type_1, type_2, status}))(item))
     const stats   = raw_data.map(item => (({hp, speed, attack, defense, sp_defense, sp_attack}) => ({hp, speed, attack, defense, sp_defense, sp_attack}))(item))
     const table = init_table(pokedex);
@@ -76,13 +76,37 @@ function init_table(data) {
     // spit out data on select
     table.on( 'select', function(e, dt, type, index) {
         var selected = table.rows( { selected: true} )
-        if (selected.count() > 6 ) {
+        if (selected.count() <= 6 ) {
+            roster_list.push(index[0])
+        } else {
             dt.rows(index).deselect();
         }
-        // console.log(selected)
-        team = selected;
+        update_roster(data)
     });
+
+    table.on( 'deselect', function (e, dt, type, indexes) {
+        for (var i = 0; i < indexes.length; i++ ) {
+            const idx = roster_list.indexOf(indexes[i]);
+            if (idx > -1) {
+                roster_list.splice(idx, 1);
+            }
+        }
+        update_roster(data)
+    });
+
+    $(document).ready( function () {
+        roster_list;
+        table;
+    })
 
     return table;
     
+}
+
+function update_roster(data) {
+    var result = "";
+    roster_list.forEach(function (item) {
+        result += '<li>' + data[item].name + '</li>';
+    })
+    document.getElementById('roster').innerHTML = result;
 }
