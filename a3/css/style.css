@@ -1,0 +1,11 @@
+.pokedex{
+    width:50%;
+    margin: right 2%;
+    float: left;
+}
+
+.chart{
+    width:50%;
+    margin: left 2%;
+    float: left;
+}
