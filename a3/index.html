@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="images/001.png">
+    <title>Pokemon Dashboard</title>
+    <script src="https://d3js.org/d3.v6.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>"
+    <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.css">
+    
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.js"></script>
+    <script src="https://cdn.datatables.net/select/1.3.3/js/dataTables.select.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.7.0/js/dataTables.buttons.min.js"></script>
+  </head>
+  <body>
+    <div id="container"></div>
+    <h1>Pokedex</h1>
+    <table id='pokemon_table' class='display'>
+      <thead>
+        <tr>
+          <th>Pokedex No.</th>
+          <th>Name</th>
+          <th>Species</th>
+          <th>Primary Type</th>
+          <th>Secondary Type</th>
+          <th>Rarity</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Bulbasaur</td>
+          <td>Seed Pokemon</td>
+          <td>Grass</td>
+          <td>Poison</td>
+          <td>Normal</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Ivysaur</td>
+          <td>Seed Pokemon</td>
+          <td>Grass</td>
+          <td>Poison</td>
+          <td>Normal</td>
+        </tr>
+      </tbody>
+    </table>
+  <script src="scripts/main.js"></script>
+  </body>
+</html>
